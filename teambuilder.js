@@ -12,8 +12,8 @@ $(document).ready(function() {
         uma.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
       $.each(filteredUmas, function(index, uma) {
-        var umaItem = $('<div class="uma-item" data-url="' + uma.pageUrl + '"></div>');
-        var umaImage = $('<img src="' + uma.imageUrl + '" alt="' + uma.name + '">');
+        var umaItem = $('<div class="uma-item"></div>');
+        var umaImage = $('<img src="' + uma.imageUrl + '" alt="' + uma.name + '" data-url="' + uma.pageUrl + '">');
         umaItem.append(umaImage);
         umaGrid.append(umaItem);
       });
@@ -49,7 +49,7 @@ $(document).ready(function() {
           umaItem.removeClass('uma-item').addClass('selected-uma');
           var umaImage = umaItem.find('img').clone();
           $(this).append(umaImage);
-          var umaUrl = umaItem.data('url');
+          var umaUrl = umaImage.data('url');
           var umaIndex = availableUmas.findIndex(uma => uma.pageUrl === umaUrl);
           availableUmas.splice(umaIndex, 1);
           var searchTerm = $('#searchInput').val();
@@ -121,7 +121,7 @@ $(document).ready(function() {
 
         if (selectedUmas.length > 0) {
           selectedUmas.each(function() {
-            var umaUrl = $(this).parent().data('url');
+            var umaUrl = $(this).data('url');
             var umaImage = $(this).clone();
             umaImage.attr('data-url', umaUrl);
             teamDetails += umaImage.prop('outerHTML');

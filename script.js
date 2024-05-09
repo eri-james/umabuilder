@@ -15,7 +15,7 @@ $(document).ready(function() {
       localStorage.removeItem('selectedUmaUrl');
     } else {
       // Fetch and extract content for the default URL on page load
-      defaultUrl = 'https://gametora.com/umamusume/characters/100103-special-week';
+      defaultUrl = characterData[0].pageUrl; // Use the first character's URL as the default
       fetchAndExtractContent(defaultUrl);
     }
   });
