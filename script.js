@@ -8,11 +8,11 @@ $(document).ready(function() {
       $('#character').append(`<option value="${character.pageUrl}">${character.name}</option>`);
     });
 
-    // Check if a default Uma URL is stored in localStorage
-    var defaultUrl = localStorage.getItem('selectedUmaUrl');
+    // Check if a default Uma URL is provided in the query string
+    var urlParams = new URLSearchParams(window.location.search);
+    var defaultUrl = urlParams.get('umaUrl');
     if (defaultUrl) {
       fetchAndExtractContent(defaultUrl);
-      localStorage.removeItem('selectedUmaUrl');
     } else {
       // Fetch and extract content for the default URL on page load
       defaultUrl = characterData[0].pageUrl; // Use the first character's URL as the default

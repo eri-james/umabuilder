@@ -1,39 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+ <!-- Meta Tags -->
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="UmaBuilder v1.0 - View and explore details of Uma Musume characters">
+ <meta name="keywords" content="Uma Musume, character viewer, game tools">
+ <meta name="author" content="Eri James">
 
-  <title>Uma Builder :: v0.1</title>
+ <!-- Title -->
+ <title>UmaBuilder v1.0 :: Character Viewer</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="style.css">
+ <!-- Styles -->
+ <link rel="stylesheet" type="text/css" href="style.css">
+ <style>
+   @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+ </style>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-  </style>
-
+ <!-- Scripts -->
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
+ <div class="container">
+   <!-- Page Heading -->
+   <h1 class="josefin-sans-heading">Character Details</h1>
 
-  <div class="container">
-  
-    <h1 class="josefin-sans-heading">Uma Details:</h1>
-    
-    <form>
-      <label for="character" class="josefin-sans-label">Select an Uma Musume:</label>
-      <select name="character" id="character" class="josefin-sans-select"></select>
-      <button type="submit" class="josefin-sans-button">Go</button>
-    </form>
-    
-    <!-- Display Data -->
-    <div class="content-wrapper"></div>
-  
-  </div>
+   <!-- Character Selection Form -->
+   <form>
+     <label for="character" class="josefin-sans-label">Select an Uma Musume:</label>
+     <select name="character" id="character" class="josefin-sans-select"></select>
+     <button type="submit" class="josefin-sans-button">Go</button>
+   </form>
 
-  <!-- Scripts -->
+   <!-- Content Display Area -->
+   <div class="content-wrapper"></div>
+ </div>
 
-  <script src="script.js"></script>
+ <!-- Footer -->
+ <footer>
+   <p>&copy; Eri James</p>
+ </footer>
+
+ <!-- Scripts -->
+ <script src="script.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   font-family: "Josefin Sans", sans-serif;
   margin: 0;
@@ -9,6 +10,7 @@ body {
   margin: 0 auto;
 }
 
+/* Headings */
 .josefin-sans-heading {
   color: #333;
   font-size: 24px;
@@ -17,6 +19,7 @@ body {
   font-style: normal;
 }
 
+/* Forms */
 form {
   margin-bottom: 20px;
 }
@@ -51,6 +54,7 @@ form {
   font-style: normal;
 }
 
+/* Extracted Content */
 .extracted-content {
   margin-bottom: 20px;
   padding: 10px;
@@ -59,12 +63,14 @@ form {
   text-align: center;
 }
 
+/* Responsive Layout */
 @media screen and (min-width: 768px) {
   .container {
     max-width: 600px;
   }
 }
 
+/* Character Infobox Styles */
 div[class*="characters_infobox_row_split"] {
   display: inline-block;
   margin: 10px;
@@ -92,8 +98,7 @@ span {
   width: 90%;
 }
 
-/* ... previous styles ... */
-
+/* Inputs */
 .josefin-sans-input {
   width: 100%;
   padding: 10px;
@@ -105,12 +110,12 @@ span {
   font-style: normal;
 }
 
+/* Race Categories */
 .race-categories {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
-
 
 .category-row {
   display: flex;
@@ -127,8 +132,8 @@ span {
   font-weight: 600;
   font-style: normal;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   padding: 10px;
   box-sizing: border-box;
@@ -139,9 +144,9 @@ span {
   margin-bottom: 10px;
 }
 
+/* Selected Uma */
 .selected-uma {
-  display: inline-block;
-  margin-right: 5px;
+  margin-right: 10px; /* Adjust the spacing between images */
 }
 
 .search-container {
@@ -153,6 +158,7 @@ span {
   height: auto;
 }
 
+/* Uma Grid */
 .uma-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -170,6 +176,7 @@ span {
   height: auto;
 }
 
+/* Team Details */
 #teamDetails {
   margin-top: 20px;
 }
@@ -190,9 +197,27 @@ span {
   background-color: #f2f2f2;
 }
 
-#teamDetails td img {
+#teamDetails .uma-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+#teamDetails .uma-details img {
   width: 50px;
   height: 50px;
   cursor: pointer;
+  margin-right: 10px;
 }
 
+#teamDetails .uma-details span {
+  margin-top: 0;
+  width: auto;
+}
+
+/* Button Container */
+#buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}

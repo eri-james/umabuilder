@@ -1,18 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Team Builder</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="UmaBuilder v1.0 - Build and customize your Uma Musume team">
+  <meta name="keywords" content="Uma Musume, team builder, game tools">
+  <meta name="author" content="Eri James">
+
+  <!-- Title -->
+  <title>UmaBuilder v1.0 :: Team Builder</title>
+
+  <!-- Styles -->
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
   </style>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
+
 <body>
   <div class="container">
+    <!-- Page Heading -->
     <h1 class="josefin-sans-heading">Team Builder</h1>
+
+    <!-- Team Builder Form -->
     <form id="teamBuilderForm">
       <label for="name" class="josefin-sans-label">Name:</label>
       <input type="text" id="name" name="name" class="josefin-sans-input" required>
@@ -23,6 +38,7 @@
       <label for="trainerId" class="josefin-sans-label">Trainer ID:</label>
       <input type="text" id="trainerId" name="trainerId" class="josefin-sans-input" required>
 
+      <!-- Race Categories -->
       <div class="race-categories">
         <div class="category-row">
           <div class="category" id="shortCategory" data-category="Short">
@@ -51,19 +67,31 @@
         </div>
       </div>
 
+      <!-- Search Container -->
       <div class="search-container">
         <input type="text" id="searchInput" placeholder="Search Uma..." class="josefin-sans-input">
       </div>
 
+      <!-- Uma Grid -->
       <div class="uma-grid"></div>
 
       <button type="submit" class="josefin-sans-button">Submit</button>
-      <button type="button" id="resetButton" class="josefin-sans-button">Reset</button>
     </form>
 
+    <!-- Team Details Display -->
     <div id="teamDetails"></div>
+    <div id="buttonContainer" style="display: none;">
+      <button id="downloadButton" class="josefin-sans-button">Download Team Data</button>
+      <button id="resetButton" class="josefin-sans-button">Reset</button>
+    </div>
   </div>
 
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Eri James</p>
+  </footer>
+
+  <!-- Scripts -->
   <script src="teambuilder.js"></script>
 </body>
 </html>
