@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Team Builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="josefin-sans-heading">Team Builder</h1>
+    <form id="teamBuilderForm">
+      <label for="name" class="josefin-sans-label">Name:</label>
+      <input type="text" id="name" name="name" class="josefin-sans-input" required>
+
+      <label for="rank" class="josefin-sans-label">In-game Rank:</label>
+      <input type="text" id="rank" name="rank" class="josefin-sans-input" required>
+
+      <label for="trainerId" class="josefin-sans-label">Trainer ID:</label>
+      <input type="text" id="trainerId" name="trainerId" class="josefin-sans-input" required>
+
+      <div class="race-categories">
+        <div class="category-row">
+          <div class="category" id="shortCategory" data-category="Short">
+            <h3>Short</h3>
+          </div>
+        </div>
+        <div class="category-row">
+          <div class="category" id="mileCategory" data-category="Mile">
+            <h3>Mile</h3>
+          </div>
+        </div>
+        <div class="category-row">
+          <div class="category" id="mediumCategory" data-category="Medium">
+            <h3>Medium</h3>
+          </div>
+        </div>
+        <div class="category-row">
+          <div class="category" id="longCategory" data-category="Long">
+            <h3>Long</h3>
+          </div>
+        </div>
+        <div class="category-row">
+          <div class="category" id="dirtCategory" data-category="Dirt">
+            <h3>Dirt</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search Uma..." class="josefin-sans-input">
+      </div>
+
+      <div class="uma-grid"></div>
+
+      <button type="submit" class="josefin-sans-button">Submit</button>
+      <button type="button" id="resetButton" class="josefin-sans-button">Reset</button>
+    </form>
+
+    <div id="teamDetails"></div>
+  </div>
+
+  <script src="teambuilder.js"></script>
+</body>
+</html>

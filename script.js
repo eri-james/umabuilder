@@ -8,9 +8,16 @@ $(document).ready(function() {
       $('#character').append(`<option value="${character.pageUrl}">${character.name}</option>`);
     });
 
-    // Fetch and extract content for the default URL on page load
-    var defaultUrl = 'https://gametora.com/umamusume/characters/100103-special-week';
-    fetchAndExtractContent(defaultUrl);
+    // Check if a default Uma URL is stored in localStorage
+    var defaultUrl = localStorage.getItem('selectedUmaUrl');
+    if (defaultUrl) {
+      fetchAndExtractContent(defaultUrl);
+      localStorage.removeItem('selectedUmaUrl');
+    } else {
+      // Fetch and extract content for the default URL on page load
+      defaultUrl = 'https://gametora.com/umamusume/characters/100103-special-week';
+      fetchAndExtractContent(defaultUrl);
+    }
   });
 
   // Handle form submission
